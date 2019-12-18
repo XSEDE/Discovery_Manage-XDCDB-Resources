@@ -1,1 +1,1 @@
-06 6,12,18 * * * /bin/bash -l -c "/soft/warehouse-apps-1.0/Manage-XDCDB/PROD/sbin/V4XDCDB.cron"
+06 6,12,18 * * * /bin/bash -l -c "/soft/warehouse-apps-1.0/Manage-XDCDB-Resources/PROD/sbin/V4XDCDB.cron"

@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB
+APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB-Resources
 APP_SOURCE=${APP_BASE}/PROD
 WAREHOUSE_SOURCE=/soft/warehouse-1.0/PROD
 
