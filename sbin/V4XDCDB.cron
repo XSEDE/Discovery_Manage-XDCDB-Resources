@@ -1,5 +1,5 @@
 #!/bin/sh
-APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB
+APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB-Resources
 APP_SOURCE=${APP_BASE}/PROD
 APP_CACHE=${APP_BASE}/var
 ${APP_SOURCE}/sbin/cache.xdcdb.pl --cache=${APP_CACHE}

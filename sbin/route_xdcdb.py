@@ -37,7 +37,7 @@ class UTC(tzinfo):
         return timedelta(0)
 utc = UTC()
 
-#default_file = '/soft/warehouse-apps-1.0/Manage-XDCDB/var/tgresources.csv'
+#default_file = '/soft/warehouse-apps-1.0/Manage-XDCDB-Resources/var/tgresources.csv'
 #default_file = './tgresources.csv'
 default_file = sys.argv[1]
 #snarfing the whole database is not the way to do it, for this anyway)
@@ -52,7 +52,7 @@ with open(default_file, 'r') as my_file:
     #Start ProcessActivity
     pa_application=os.path.basename(__file__)
     pa_function='main'
-    pa_topic = 'XDCDB'
+    pa_topic = 'XDCDB-Resource'
     pa_id = pa_topic
     pa_about = 'xsede.org'
     pa = ProcessingActivity(pa_application, pa_function, pa_id , pa_topic, pa_about)
