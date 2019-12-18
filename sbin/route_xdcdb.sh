@@ -1,18 +1,18 @@
 #!/bin/bash
-APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB
-APP_SOURCE=${APP_BASE}/PROD
-WAREHOUSE_SOURCE=/soft/warehouse-1.0/PROD
+MY_ROOT=/soft/warehouse-apps-1.0/Manage-XDCDB/PROD
+WAREHOUSE_ROOT=/soft/warehouse-1.0/PROD
 
-PYTHON_BASE=${APP_BASE}/`cat python/lib/python*/orig-prefix.txt`
+#PYTHON=/soft/python-current/bin/python
+#export LD_LIBRARY_PATH=/soft/python-current/lib/
+
+PYTHON_BASE=/soft/python/python-3.6.6-base
 export LD_LIBRARY_PATH=${PYTHON_BASE}/lib
 
-PIPENV_BASE=${APP_BASE}/python
-source ${PIPENV_BASE}/bin/activate
+PYTHON_ROOT=/soft/warehouse-apps-1.0/Manage-XDCDB/python
+source ${PYTHON_ROOT}/bin/activate
 
-PYTHON_BIN=python3
-
-export PYTHONPATH=${WAREHOUSE_SOURCE}/django_xsede_warehouse
-export DJANGO_CONF=${APP_BASE}/conf/django_xsede_warehouse.conf
+export PYTHONPATH=${WAREHOUSE_ROOT}/django_xsede_warehouse
+export DJANGO_CONF=/soft/warehouse-apps-1.0/Manage-XDCDB/conf/django_xsede_warehouse.conf
 export DJANGO_SETTINGS_MODULE=xsede_warehouse.settings
 
-${PYTHON_BIN} ${APP_SOURCE}/sbin/route_xdcdb.py ${@:1}
+python ${MY_ROOT}/sbin/route_xdcdb.py ${@:1}
