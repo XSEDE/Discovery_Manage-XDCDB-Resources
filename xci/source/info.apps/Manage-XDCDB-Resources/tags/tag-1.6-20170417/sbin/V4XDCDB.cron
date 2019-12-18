@@ -1,0 +1,11 @@
+#!/bin/sh
+LOCATION=/soft/warehouse-apps-1.0/Manage-XDCDB/
+PRODLOC=$LOCATION/PROD/
+CACHE=$LOCATION/var
+$PRODLOC/sbin/cache.xdcdb.pl --cache=$CACHE
+
+DATE=`date +%Y-%m-%dT%H:%M:%SZ`
+#LOG=/soft/info/logs/outages.log
+LOG=$CACHE/outages.log
+
+$PRODLOC/sbin/route_XDCDB.sh

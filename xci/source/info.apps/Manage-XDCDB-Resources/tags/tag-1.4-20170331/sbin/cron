@@ -1,0 +1,1 @@
+15 * * * * /bin/bash -l -c "/soft/warehouse-apps-1.0/Manage-Speedpage/PROD/sbin/speedpage.cron" 
