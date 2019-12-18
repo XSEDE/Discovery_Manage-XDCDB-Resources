@@ -1,10 +1,10 @@
 #!/bin/sh
-APP_BASE=/soft/warehouse-apps-1.0/Manage-XDCDB
-APP_SOURCE=${APP_BASE}/PROD
-APP_CACHE=${APP_BASE}/var
-${APP_SOURCE}/sbin/cache.xdcdb.pl --cache=${APP_CACHE}
+LOCATION=/soft/warehouse-apps-1.0/Manage-XDCDB/
+PRODLOC=$LOCATION/PROD/
+CACHE=$LOCATION/var
+$PRODLOC/sbin/cache.xdcdb.pl --cache=$CACHE
 
 DATE=`date +%Y-%m-%dT%H:%M:%SZ`
-LOG=${APP_CACHE}/outages.log
+LOG=$CACHE/outages.log
 
-${APP_SOURCE}/sbin/route_xdcdb.sh ${APP_CACHE}/tgresources.csv
+$PRODLOC/sbin/route_xdcdb.sh

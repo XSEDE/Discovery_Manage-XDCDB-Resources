@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import pprint
 import os
@@ -12,10 +12,7 @@ import signal
 import datetime
 from datetime import datetime, tzinfo, timedelta
 from time import sleep
-try:
-    import http.client as httplib
-except ImportError:
-    import httplib
+import httplib
 import json
 import csv
 import ssl
@@ -38,8 +35,7 @@ class UTC(tzinfo):
 utc = UTC()
 
 #default_file = '/soft/warehouse-apps-1.0/Manage-XDCDB/var/tgresources.csv'
-#default_file = './tgresources.csv'
-default_file = sys.argv[1]
+default_file = './tgresources.csv'
 #snarfing the whole database is not the way to do it, for this anyway)
 databasestate = serializers.serialize("json", TGResource.objects.all())
 dbstate = json.loads(databasestate)
@@ -54,7 +50,7 @@ with open(default_file, 'r') as my_file:
     pa_function='main'
     pa_topic = 'XDCDB'
     pa_id = pa_topic
-    pa_about = 'xsede.org'
+    pa_about = 'project_affiliation=XSEDE'
     pa = ProcessingActivity(pa_application, pa_function, pa_id , pa_topic, pa_about)
     for row in tgcdb_csv:
         if row['ResourceID'] in dbhash.keys():
