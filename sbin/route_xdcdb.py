@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import pprint
 import os
@@ -12,10 +12,7 @@ import signal
 import datetime
 from datetime import datetime, tzinfo, timedelta
 from time import sleep
-try:
-    import http.client as httplib
-except ImportError:
-    import httplib
+import httplib
 import json
 import csv
 import ssl
