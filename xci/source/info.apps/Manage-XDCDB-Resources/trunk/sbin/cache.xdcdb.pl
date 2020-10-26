@@ -354,5 +354,6 @@ sub resource_name_to_resourceid {
       $resourceid = $resource_name . '.org';
    } else {
       $resourceid = $resource_name;
+   }
    return($resourceid);
 }
