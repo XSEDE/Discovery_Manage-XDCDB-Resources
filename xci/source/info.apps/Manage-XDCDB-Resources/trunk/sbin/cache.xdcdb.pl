@@ -350,8 +350,9 @@ sub resource_name_to_resourceid {
       $resourceid = 'gordon.sdsc.xsede.org'; 
    } elsif ( $resource_name eq 'gordon-ion.sdsc.teragrid' ) {
       $resourceid = 'gordonio.sdsc.xsede.org'; 
-   } else {
+   } elsif ( $resource_name !~ /\.org$/ ) {
       $resourceid = $resource_name . '.org';
-   }
+   } else {
+      $resourceid = $resource_name;
    return($resourceid);
 }
