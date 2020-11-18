@@ -1,4 +1,4 @@
-# XSEDE Information Services - Manage-XDCDB-Resources
+# Manage-XDCDB-Resources Router for XSEDE Information Services
 
 Synchronize XDCDB Resources to the Information Services warehouse.
 
