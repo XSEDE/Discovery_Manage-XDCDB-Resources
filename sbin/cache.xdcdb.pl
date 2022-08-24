@@ -28,8 +28,8 @@ use   Getopt::Long;
 use   DBD::Pg qw(:pg_types);
 use   Text::CSV_XS;
 
-my $DBHOST = 'tgcdb.teragrid.org';
-my $DBNAME = 'teragrid';
+my $DBHOST = 'rampsdb.access-ci.org';
+my $DBNAME = 'allocations';
 my $DBPORT = 5432;
 my $DBUSER = 'info_services';
 #my $DBPASS = '7F7neder'; 
